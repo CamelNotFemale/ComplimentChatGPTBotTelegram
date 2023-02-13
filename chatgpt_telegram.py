@@ -20,7 +20,6 @@ TOPICS = [
     ['Юмористическом', 'скажи мне, что я милая как котик'],
     ['Очаровательном', 'скажи о том, что меня любят'],
     ['Успокаивающем', 'скажи мне о приятных вещах в мире'],
-    ['Саркастичном', 'скажи о том, что самовлюбленность это плохо'],
     ['/img', 'котята поздравляют с 14 февраля'],
     ['/img', 'влюбленная пара радуется жизни'],
     ['/img', 'влюбленная пара в Париже']
@@ -43,7 +42,7 @@ def openAI(prompt):
     response = requests.post(
         'https://api.openai.com/v1/completions',
         headers={'Authorization': f'Bearer {API_KEY}'},
-        json={'model': MODEL, 'prompt': prompt, 'temperature': 0.4, 'max_tokens': 300}
+        json={'model': MODEL, 'prompt': prompt, 'temperature': 0.4, 'max_tokens': 450}
     )
 
     result = response.json()
