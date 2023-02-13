@@ -122,7 +122,7 @@ def Chatbot():
     return "done"
 
 def main():
-    timertime=5
+    timertime=600
     Chatbot()
    
     threading.Timer(timertime, main).start()
